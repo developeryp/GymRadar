@@ -1,0 +1,32 @@
+name: Gym Data Collector
+
+on:
+  schedule:
+    # 22:30 UTC = 23:30 MEZ (Winterzeit)
+    # 21:30 UTC = 23:30 MESZ (Sommerzeit)
+    # Beide Zeiten laufen lassen – das Script handhabt Duplikate
+    - cron: '30 21 * * *'
+    - cron: '30 22 * * *'
+  workflow_dispatch: # Manuell starten Button auf GitHub
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Gym Collector
+        run: python gym_collector_direct.py
+        env:
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}

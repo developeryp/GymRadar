@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymTime App Download</title>
+  <script>
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(ua)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.gymauslastung";
+    } else if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+      window.location.href = "https://apps.apple.com/us/app/gymtime-live-auslastung/id6758906348";
+    }
+  </script>
+</head>
+<body>
+  <p>Du wirst weitergeleitet…</p>
+  <p>Falls nicht automatisch:</p>
+  <ul>
+    <li><a href="https://play.google.com/store/apps/details?id=com.gymauslastung">Android (Google Play)</a></li>
+    <li><a href="https://apps.apple.com/us/app/gymtime-live-auslastung/id6758906348">iOS (App Store)</a></li>
+  </ul>
+</body>
+</html>

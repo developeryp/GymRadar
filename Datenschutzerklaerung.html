@@ -29,7 +29,7 @@
 <body>
   <h1>Datenschutzerkl&auml;rung / Privacy Policy</h1>
 
-  <p><strong>Stand / Last updated: Februar / February 2026</strong></p>
+  <p><strong>Stand / Last updated: M&auml;rz / March 2026</strong></p>
 
   <p>
     Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Diese App verarbeitet Ihre Daten ausschlie&szlig;lich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TTDSG). Nachfolgend informieren wir Sie &uuml;ber Art, Umfang und Zweck der Datenverarbeitung.<br>
@@ -45,8 +45,8 @@
   </p>
 
   <h2>1. Verarbeitete Daten / Data Processed</h2>
-  <p>Die App verarbeitet nur die Daten, die f&uuml;r die Funktion zwingend erforderlich sind.<br>
-     The app only processes data strictly required for functionality.</p>
+  <p>Die App verarbeitet nur die Daten, die f&uuml;r die Funktion erforderlich sind.<br>
+     The app only processes data required for functionality.</p>
 
   <ul>
     <li><strong>Auslastungsdaten</strong> werden &uuml;ber die Magicline API, die FitX API, die clever fit API und die Fitness First API abgerufen und angezeigt (ohne Personenbezug)<br>
@@ -55,11 +55,14 @@
     <li><strong>Anonymisierte Auslastungsdaten</strong> werden an einen externen Server (Supabase) &uuml;bermittelt, um gemeinschaftliche Prognosen zu erstellen. Dabei wird ein zuf&auml;llig generierter Ger&auml;te-Hash zur Deduplizierung verwendet &ndash; dieser ist nicht r&uuml;ckverfolgbar.<br>
         <em>Anonymized occupancy data</em> is transmitted to an external server (Supabase) to generate community-based forecasts. A randomly generated device hash is used for deduplication &ndash; it is not traceable.</li>
 
-    <li><strong>Keine</strong> Erhebung personenbezogener Daten (kein Login, kein Nutzerkonto)<br>
-        <em>No</em> collection of personal data (no login, no user account)</li>
+    <li><strong>App-Einstellungen</strong> werden &uuml;ber Google Firestore geladen (z.&nbsp;B. Konfigurationsdaten). Es werden dabei keine personenbezogenen Daten gespeichert oder &uuml;bertragen.<br>
+        <em>App settings</em> are loaded via Google Firestore (e.g. configuration data). No personal data is stored or transmitted in this process.</li>
 
-    <li><strong>Keine</strong> Analyse- oder Tracking-Dienste<br>
-        <em>No</em> analytics or tracking tools</li>
+    <li><strong>Nutzungsanalytik</strong> wird &uuml;ber Firebase Analytics (Google LLC) erfasst. Details siehe Abschnitt&nbsp;1c.<br>
+        <em>Usage analytics</em> are collected via Firebase Analytics (Google LLC). See section&nbsp;1c for details.</li>
+
+    <li><strong>Keine</strong> Erhebung personenbezogener Konten (kein Login, kein Nutzerkonto)<br>
+        <em>No</em> collection of personal accounts (no login, no user account)</li>
 
     <li><strong>Keine</strong> In-App-K&auml;ufe, Werbung oder externe User-IDs<br>
         <em>No</em> in-app purchases, ads or external user IDs</li>
@@ -83,10 +86,41 @@
     No IP addresses, device IDs, location data or other personal data is stored or transmitted. The device hash is not traceable and is used solely to prevent duplicate entries.
   </p>
 
-  <h2>1b. Netzwerkverbindungen / Network Connections</h2>
+  <h2>1b. App-Einstellungen (Google Firestore) / App Settings (Google Firestore)</h2>
   <p>
-    Die App stellt Verbindungen zu folgenden Diensten her, um Studioinformationen und Auslastungsdaten abzurufen:<br>
-    The app connects to the following services to retrieve studio information and occupancy data:
+    Die App ruft &uuml;ber Google Firestore (Google LLC, USA) Konfigurationsdaten und App-Einstellungen ab. Hierbei werden keine personenbezogenen Daten gespeichert. Die Verbindung dient ausschlie&szlig;lich dem Laden globaler App-Konfigurationen. Die Daten&uuml;bermittlung in die USA erfolgt auf Grundlage von Standardvertragsklauseln gem&auml;&szlig; Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO.<br>
+    The app retrieves configuration data and app settings via Google Firestore (Google LLC, USA). No personal data is stored. The connection is used solely to load global app configurations. Data transfer to the USA is based on Standard Contractual Clauses pursuant to Art.&nbsp;46(2)(c) GDPR.
+  </p>
+
+  <h2>1c. Nutzungsanalytik (Firebase Analytics) / Usage Analytics (Firebase Analytics)</h2>
+  <p>
+    Die App verwendet Firebase Analytics, einen Analysedienst von Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Firebase Analytics erhebt pseudonymisierte Nutzungsdaten, um die Funktionalit&auml;t der App zu verbessern. Folgende Datenkategorien k&ouml;nnen dabei verarbeitet werden:<br>
+    The app uses Firebase Analytics, an analytics service provided by Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Firebase Analytics collects pseudonymized usage data to improve app functionality. The following data categories may be processed:
+  </p>
+  <ul>
+    <li>Ger&auml;teinformationen (Modell, Betriebssystemversion, Spracheinstellung) / Device information (model, OS version, language setting)</li>
+    <li>App-Nutzungsereignisse (Standard-Events sowie eigene Events, z.&nbsp;B. aufgerufene Studio-Seiten oder genutzte Funktionen) / App usage events (standard events and custom events, e.g. studio pages visited or features used)</li>
+    <li>Sitzungsdauer und App-Starts / Session duration and app launches</li>
+    <li>Eine pseudonyme Firebase-Installations-ID / A pseudonymous Firebase installation ID</li>
+    <li>Land/Region (abgeleitet aus der IP-Adresse, nicht gespeichert) / Country/region (derived from IP address, not stored)</li>
+  </ul>
+  <p>
+    Die erhobenen Daten werden an Server von Google in den USA &uuml;bermittelt. Die Daten&uuml;bermittlung erfolgt auf Grundlage von Standardvertragsklauseln gem&auml;&szlig; Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO. Google verarbeitet diese Daten als Auftragsverarbeiter gem&auml;&szlig; Art.&nbsp;28 DSGVO.<br>
+    The collected data is transmitted to Google servers in the USA. The data transfer is based on Standard Contractual Clauses pursuant to Art.&nbsp;46(2)(c) GDPR. Google processes this data as a data processor pursuant to Art.&nbsp;28 GDPR.
+  </p>
+  <p>
+    Sie k&ouml;nnen die Datenerfassung durch Firebase Analytics deaktivieren, indem Sie in den iOS-Einstellungen unter <em>Datenschutz &amp; Sicherheit &rarr; Tracking</em> das App-Tracking deaktivieren oder die entsprechende Einstellung Ihres Ger&auml;ts nutzen.<br>
+    You can disable data collection by Firebase Analytics by turning off app tracking in iOS Settings under <em>Privacy &amp; Security &rarr; Tracking</em>, or by using the corresponding setting on your device.
+  </p>
+  <p>
+    Weitere Informationen zur Datenverarbeitung durch Google finden Sie unter: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a><br>
+    More information on data processing by Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+  </p>
+
+  <h2>1d. Netzwerkverbindungen / Network Connections</h2>
+  <p>
+    Die App stellt Verbindungen zu folgenden Diensten her:<br>
+    The app connects to the following services:
   </p>
   <ul>
     <li>Magicline API (rsg-group.api.magicline.com) &ndash; RSG Group Studios</li>
@@ -94,54 +128,54 @@
     <li>clever fit API (dein.clever-fit.com) &ndash; clever fit Studios</li>
     <li>Fitness First API (www.fitnessfirst.de) &ndash; Fitness First Studios</li>
     <li>Supabase (lubjhjoetscgpsckckjs.supabase.co) &ndash; Prognose-Daten / Forecast data</li>
+    <li>Google Firestore (firestore.googleapis.com) &ndash; App-Einstellungen / App settings</li>
+    <li>Google Firebase Analytics (firebase.googleapis.com) &ndash; Nutzungsanalytik / Usage analytics</li>
   </ul>
-  <p>
-    Dabei werden keine personenbezogenen Daten &uuml;bermittelt. Es wird lediglich die Studio-ID zur Abfrage der Auslastung &uuml;bertragen.<br>
-    No personal data is transmitted. Only the studio ID is sent to query occupancy data.
-  </p>
 
   <h2>2. Rechtsgrundlagen / Legal Basis</h2>
   <p>
     Art. 6 Abs. 1 lit. b DSGVO (Betrieb der App),<br>
-    Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse &ndash; fehlerfreie Darstellung der Auslastungsdaten und Erstellung gemeinschaftlicher Prognosen).<br><br>
+    Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse &ndash; fehlerfreie Darstellung der Auslastungsdaten, Erstellung gemeinschaftlicher Prognosen sowie Verbesserung der App durch anonymisierte Nutzungsanalytik).<br>
+    Die Daten&uuml;bermittlung in die USA (Firebase Analytics, Firestore) erfolgt auf Grundlage von Standardvertragsklauseln gem&auml;&szlig; Art. 46 Abs. 2 lit. c DSGVO.<br><br>
 
     Art. 6(1)(b) GDPR (app operation),<br>
-    Art. 6(1)(f) GDPR (legitimate interest &ndash; correct display of occupancy data and generation of community-based forecasts).
+    Art. 6(1)(f) GDPR (legitimate interest &ndash; correct display of occupancy data, generation of community-based forecasts, and improvement of the app through anonymized usage analytics).<br>
+    Data transfer to the USA (Firebase Analytics, Firestore) is based on Standard Contractual Clauses pursuant to Art. 46(2)(c) GDPR.
   </p>
 
   <h2>3. Speicherfristen / Storage</h2>
   <p>
     Die an Supabase &uuml;bermittelten anonymisierten Auslastungsdaten werden serverseitig zur Berechnung von Durchschnittswerten gespeichert. Da diese Daten keinen Personenbezug aufweisen, ist eine L&ouml;schung einzelner Nutzer-Beitr&auml;ge nicht m&ouml;glich.
-    Es werden keine personenbezogenen Daten gespeichert.<br>
+    Firebase Analytics speichert Analysedaten standardm&auml;&szlig;ig f&uuml;r 14 Monate. Es werden keine personenbezogenen Daten gespeichert.<br>
     The anonymized occupancy data transmitted to Supabase is stored on the server to calculate averages. Since this data contains no personal reference, deletion of individual user contributions is not possible.
-    No personal data is stored.
+    Firebase Analytics retains analytics data for 14 months by default. No personal data is stored.
   </p>
 
   <h2>4. Weitergabe von Daten / Data Sharing</h2>
   <p>
-    Es findet keine Weitergabe personenbezogener Daten an Dritte statt. Die an Supabase &uuml;bermittelten Daten sind vollst&auml;ndig anonymisiert und enthalten keine personenbezogenen Informationen.<br>
-    There is no sharing of personal data with third parties. The data transmitted to Supabase is fully anonymized and contains no personal information.
+    Personenbezogene Daten werden nicht an Dritte weitergegeben. Die an Supabase &uuml;bermittelten Daten sind vollst&auml;ndig anonymisiert. Firebase Analytics und Google Firestore erhalten pseudonymisierte bzw. nicht-personenbezogene Daten und verarbeiten diese als Auftragsverarbeiter gem&auml;&szlig; Art.&nbsp;28 DSGVO.<br>
+    No personal data is shared with third parties. Data transmitted to Supabase is fully anonymized. Firebase Analytics and Google Firestore receive pseudonymized or non-personal data and process it as data processors pursuant to Art.&nbsp;28 GDPR.
   </p>
 
   <h2>5. Auftragsverarbeiter / Data Processors</h2>
-  <p>
-    Die anonymisierten Prognose-Daten werden bei Supabase Inc. (USA / EU-Hosting) gespeichert. Es handelt sich dabei ausschlie&szlig;lich um nicht-personenbezogene, aggregierte Auslastungswerte.<br>
-    Anonymized forecast data is stored with Supabase Inc. (USA / EU hosting). This data consists exclusively of non-personal, aggregated occupancy values.
-  </p>
+  <ul>
+    <li><strong>Supabase Inc.</strong> (USA / EU-Hosting) &ndash; anonymisierte Prognose-Daten / anonymized forecast data</li>
+    <li><strong>Google LLC</strong> (USA) &ndash; Firebase Analytics (Nutzungsanalytik / usage analytics) und Google Firestore (App-Einstellungen / app settings); Daten&uuml;bermittlung auf Basis von Standardvertragsklauseln / data transfer based on Standard Contractual Clauses</li>
+  </ul>
 
   <h2>6. Rechte der Nutzer / Your Rights</h2>
   <p>
     Sie haben jederzeit das Recht auf Auskunft, L&ouml;schung, Einschr&auml;nkung, Widerspruch und Daten&uuml;bertragbarkeit.
-    Da die App keine personenbezogenen Daten erhebt, beziehen sich diese Rechte auf etwaige zuk&uuml;nftige &Auml;nderungen der Datenverarbeitung.<br>
-    You have the right to access, delete, restrict, object, and transfer your data.
-    Since the app does not collect personal data, these rights apply to any future changes in data processing.<br><br>
+    Da die App &uuml;berwiegend keine personenbezogenen Daten erhebt, beziehen sich diese Rechte haupts&auml;chlich auf die durch Firebase Analytics verarbeiteten pseudonymisierten Daten. Die Erfassung durch Firebase Analytics kann &uuml;ber die Ger&auml;teeinstellungen deaktiviert werden (siehe Abschnitt&nbsp;1c).<br>
+    You have the right to access, delete, restrict, object to, and transfer your data.
+    Since the app largely does not collect personal data, these rights primarily apply to pseudonymized data processed by Firebase Analytics. Collection by Firebase Analytics can be disabled via device settings (see section&nbsp;1c).<br><br>
     Kontakt / Contact: <a href="mailto:developeryp1@gmail.com">developeryp1@gmail.com</a>
   </p>
 
   <h2>7. Sicherheit / Security</h2>
   <p>
-    Da keine personenbezogenen Daten &uuml;bertragen werden, besteht ein sehr geringes Risiko. Die Kommunikation mit allen externen Diensten erfolgt ausschlie&szlig;lich verschl&uuml;sselt (HTTPS). Dennoch k&ouml;nnen Daten&uuml;bertragungen im Internet nie vollst&auml;ndig gesch&uuml;tzt werden.<br>
-    Since no personal data is transmitted, the risk is very low. All communication with external services is encrypted (HTTPS). However, internet communication can never be fully secured.
+    Die Kommunikation mit allen externen Diensten erfolgt ausschlie&szlig;lich verschl&uuml;sselt (HTTPS). Da keine sensiblen personenbezogenen Daten &uuml;bertragen werden, ist das Risiko sehr gering. Dennoch k&ouml;nnen Daten&uuml;bertragungen im Internet nie vollst&auml;ndig gesch&uuml;tzt werden.<br>
+    All communication with external services is encrypted (HTTPS). Since no sensitive personal data is transmitted, the risk is very low. However, internet communication can never be fully secured.
   </p>
 
   <h2>8. &Auml;nderungen / Changes</h2>
